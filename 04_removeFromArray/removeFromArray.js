@@ -1,9 +1,10 @@
 const removeFromArray = function(array, ...removeThis) {
-    for (let i = 0; i<array.length;i++){
+    let removeArrayTracker = removeThis;
+    let removeArrayLength = removeThis.length;
+    for (let i = 0; i < array.length;i++){
         for (j=0; j < removeThis.length; j++){
             if (array[i] === removeThis[j]){
-                array.splice(i)
-                console.log(array)
+                array.splice(i,1)
             }   
         }
     }
