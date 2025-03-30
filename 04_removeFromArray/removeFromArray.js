@@ -1,9 +1,6 @@
 const removeFromArray = function(array, ...removeThis) {
     let newArray = [];
-    let dumbConcatArray = [];
-    let sliceStart = 0;
     
-
      newArray = array.filter( function( burr ) {
         return !removeThis.includes( burr );
       } );
