@@ -3,9 +3,20 @@ const sumAll = function(num1,num2) {
     let startNumber = 0;
     let endNumber = 0;
     // check which is startnumber and endnumber
-    if (num1 < 0 || num2 < 0 || !Number.isInteger(num1) || !Number.isInteger(num2)){
+    // return error if neg numbers
+    if (num1 < 0 || num2 < 0){
         return "ERROR"
-    } else if (num1 < num2){
+    } 
+    // return error if no integer
+    else if (!Number.isInteger(num1) || !Number.isInteger(num2)){
+        return "ERROR"
+    }
+    // return error if no number
+    else if (!typeof num1 === 'number'|| !typeof num2 === 'number'){
+        return "ERROR"
+    }
+
+    else if (num1 < num2){
         startNumber = num1;
         endNumber = num2;
     } else {
