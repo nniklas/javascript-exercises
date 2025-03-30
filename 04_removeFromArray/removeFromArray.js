@@ -1,14 +1,14 @@
 const removeFromArray = function(array, ...removeThis) {
-    let removeArrayTracker = removeThis;
-    let removeArrayLength = removeThis.length;
-    for (let i = 0; i < array.length;i++){
-        for (j=0; j < removeThis.length; j++){
-            if (array[i] === removeThis[j]){
-                array.splice(i,1)
-            }   
-        }
-    }
-    return array
+    let newArray = [];
+    let dumbConcatArray = [];
+    let sliceStart = 0;
+    
+
+     newArray = array.filter( function( burr ) {
+        return !removeThis.includes( burr );
+      } );
+
+    return newArray
 }
 
 // Do not edit below this line
